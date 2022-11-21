@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import Cookies from "js-cookie";
 import CubosService from "../services/Cubos";
 
 var servicio = new CubosService();
@@ -18,15 +19,22 @@ export default {
     data() {
         return {
             id:"",
-            res:{}
         };
     },
     methods:{
         comprar(){
             servicio.comprar(this.id).then(res => {
                 res;
+                this.$router.push("/zonaseguridad")
             })
         }
+    },
+    mounted(){
+        if(Cookies.get("token") == undefined){
+            this.$router.push("/login")
+
+        }
+        this.id = this.$route.params.id
     }
 };
 </script>

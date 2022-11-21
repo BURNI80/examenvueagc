@@ -31,7 +31,7 @@ const misRutas = [
         path:"/compras", component:ComprasComponent
     },
     {
-        path:"/comprar", component:ComprarComponent
+        path:"/comprar/:id?", component:ComprarComponent
     },
     
 ]

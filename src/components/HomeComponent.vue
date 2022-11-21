@@ -14,6 +14,8 @@
                 <h5 class="card-title">{{ cubo.nombre }}</h5>
                 <p class="card-text" style="color: blue">{{ cubo.precio }}€</p>
                 <router-link :to="'/cubo/'+cubo.idCubo" class="btn btn-primary">Detalles</router-link>
+                <router-link :to="'/comprar/'+cubo.idCubo" class="btn btn-warning" >Comprar</router-link>
+
             </div>
         </div>
     </div>

@@ -65,7 +65,6 @@ export default class CubosService {
                 pass: pass,
             }
             axios.post(Global.url + req, data).then(res => {
-                console.log(res.data);
                 resolve(res.data)
             })
         })
@@ -114,7 +113,6 @@ export default class CubosService {
             var data= {
 
             }
-            console.log(headers);
             axios.post(Global.url + req +id,data, headers).then(res => {
                 resolve(res)
             })
